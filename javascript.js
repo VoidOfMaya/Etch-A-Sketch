@@ -2,7 +2,7 @@
 
 const mainContainer = document.querySelector('.main-container');
 
-let gridSize = 16
+let gridSize = 16;
 
 const createGrid = function (gridSize){
     
@@ -24,6 +24,7 @@ const createGrid = function (gridSize){
 }
 createGrid(gridSize);
 
+
 const pixelate = document.querySelectorAll('.column-element');
  pixelate.forEach((pixel) => pixel.addEventListener('mouseover', ()=>{
 
@@ -37,7 +38,6 @@ button.addEventListener('click', ()=>{
     const divElement = document.querySelectorAll('.column-element');
     resetColor(divElement);
     changeSize();
-    console.log('color has changed');
 
    
 });
@@ -57,7 +57,19 @@ function resetColor(elements){
  function changeSize(){
     let gridChoice = prompt("choose a grid size between 16X16 and 100X100");
     if (gridChoice >=16 && gridChoice <= 100){
-        gridSize = gridChoice;
+
+        const oldRow = document.querySelectorAll('.row-element');
+        const oldColumn = document.querySelectorAll('.column-element');   
+
+        oldRow.forEach((element) => element.remove(element));
+        //oldColumn.forEach((element) => element.remove(element));
+
+        createGrid(gridChoice);
+        const pixelate = document.querySelectorAll('.column-element');
+        pixelate.forEach((pixel) => pixel.addEventListener('mouseover', ()=>{
+            
+            changeColor(pixel);
+        }));
     }else{
         changeSize();
     }
