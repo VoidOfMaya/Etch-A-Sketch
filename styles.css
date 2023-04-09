@@ -3,14 +3,14 @@
     flex-wrap: wrap;
     width:600px;
     height: 600px;
-    border: 2px dotted black;
+    border: 1px dotted black;
     margin: auto;
     flex-direction: column;
     flex: auto;
 }
 .column-element{
     display: flex;
-    border: 2px dotted black;
+    
     
     align-items: center;
     justify-content: center;
@@ -22,7 +22,6 @@
     background-color: red;
 }
 .row-element{
-    background-color: blue;
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
