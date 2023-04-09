@@ -1,8 +1,8 @@
 .main-container{
     display: flex;
     flex-wrap: wrap;
-    width:600px;
-    height: 600px;
+    width:960px;
+    height: 960px;
     border: 1px dotted black;
     margin: auto;
     flex-direction: column;
@@ -25,4 +25,12 @@
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
+}
+#btn{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    width: 960px;
+
 }
