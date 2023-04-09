@@ -9,8 +9,9 @@ const createGrid = function (gridSize){
     for( let y = 0; y < gridSize; y++){
         for(let x = 0; x < gridSize; x++){
             const pixel= document.createElement('div');
-            pixel.classList.add(`${y},${x}`);
-            pixel.style.color = 'red';
+            pixel.classList.add(`grid-element`);
+            pixel.textContent =`div`;
+            
             mainContainer.appendChild(pixel);
         }
     }

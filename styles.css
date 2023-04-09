@@ -1,8 +1,17 @@
 .main-container{
     display: flex;
-    gap: 1px;
+    flex-wrap: wrap;
+    width:500px;
+    height: 500px;
+    flex: 1;
 }
-div{
+.grid-element{
     display: block;
     background-color: blue;
+    
+    flex-wrap: wrap;
+
+}
+.grid-element:hover{
+    background-color: red;
 }
